@@ -14,14 +14,14 @@ spring:
           uri: lb://borrowservice
           predicates:
           - Path=/borrow/**
-          filters:
-          - AddRequestHeader=Jungle, HelloWorld!
+          filters:    # 添加过滤器 localhost:8500/borrow/1
+          - AddRequestHeader=Test, HelloWorld!
         # 继续添加新的路由配置，这里就以书籍管理服务为例
         # 注意-要对齐routes:
         - id: book-service
           uri: lb://bookservice
           predicates:
           - Path=/book/**
-          filters:   # 添加过滤器
-          - AddRequestHeader=Jungle, HelloWorld!
+          filters:   # 添加过滤器 localhost:8500/book/1
+          - AddRequestHeader=Test, HelloWorld!
           # AddRequestHeader 就是添加请求头信息，其他工厂请查阅官网
