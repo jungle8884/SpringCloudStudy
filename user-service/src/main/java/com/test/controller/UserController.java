@@ -22,7 +22,7 @@ public class UserController {
     public User findUserById(@PathVariable("uid") int uid,
                              HttpServletRequest request){
         System.out.println("user-我被调用拉！");
-        System.out.println(request.getHeader("Jungle"));
+        System.out.println(request.getHeader("Test"));
         return service.getUserById(uid);
     }
 }
