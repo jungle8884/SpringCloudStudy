@@ -6,7 +6,7 @@ server:
 #      defaultZone: http://localhost:8801/eureka, http://localhost:8802/eureka
 spring:
   application:
-    name: gateway
+    name: gatewayservice
   cloud:
     gateway:
       routes:
